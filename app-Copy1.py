@@ -1,4 +1,5 @@
 import pickle
+import numpy as np
 import streamlit as st
 
 model = pickle.load(open('result_model.pkl', 'rb'))
@@ -29,7 +30,7 @@ with col1:
     
 
 if st.button('Recommend'):
-    crop_prediction = model.predict([[N,P,K,Temp,pH,Humidity,Rainfall]])
+    crop_prediction = model.predict([[N,P,K,Temp,Humidity,pH,Rainfall]])
 
 st.success(crop_prediction)
     
