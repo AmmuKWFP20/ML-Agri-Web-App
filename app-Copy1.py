@@ -5,7 +5,6 @@ from streamlit_option_menu import option_menu
 
 model = pickle.load(open('result_model.pkl', 'rb'))
 
-app = Flask(__name__,template_folder='C:/Users/amrut/major/Real/template')
 
 st.title('Home')
 col1, col2, col3 = st.columns(3)
